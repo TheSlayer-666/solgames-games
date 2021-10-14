@@ -4,6 +4,7 @@ function addEnding(score) {
   if (!document.getElementById("score").classList.contains("end")) {
     document.getElementById("score").innerText = score;
     document.getElementById("score").classList = "end";
+    document.getElementById("pause").classList = "pause";
   }
 }
 function _L(t) {
@@ -2154,8 +2155,10 @@ class gd {
     G.ax && G.dL(), (_a = 0);
 
     document.getElementById("pause").classList = "";
-    if (document.getElementById("score").classList === "end")
+
+    if (document.getElementById("score").classList.value) {
       document.getElementById("score").classList = "";
+    }
   }
   dL() {
     (G._e = new ge()),
@@ -2172,10 +2175,7 @@ class gd {
   }
   eC() {
     G.dL(), (_a = 1), (G.ax = 1), (G.bC = []);
-    if (document.getElementById("score").classList.contains("end")) {
-      document.getElementById("score").innerText = "";
-      document.getElementById("score").classList = "";
-    }
+
     for (let t = 0; t < 10; t++) {
       let t = random() * _f,
         i = F(200, 350),
