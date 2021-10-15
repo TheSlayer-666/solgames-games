@@ -93,6 +93,14 @@ function App() {
             </center>
           </div>
         </a>
+        <a href="/swagshot">
+          <div className="card">
+            <h2>Swagshot</h2>
+            <center>
+              <img src="https://i.imgur.com/bCsiGUA.png" alt="" />
+            </center>
+          </div>
+        </a>
       </div>
     </div>
   );
